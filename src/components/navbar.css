@@ -1,0 +1,22 @@
+.navbar{
+    background-image: url(https://i.pinimg.com/736x/1a/a1/f5/1aa1f58d054a26afe52d7de12697102f.jpg);
+    background-color: #564147;
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+.image{
+    filter: drop-shadow(2px 3px 10px rgba(0,0,0,0.7));
+}
+
+.side-items{
+    position: relative;
+
+}
+
+.side-items::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;   
+    z-index: -1;
+}
