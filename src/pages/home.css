@@ -1,6 +1,6 @@
 
-/* video{
-  position: absolute;
+video{
+  position: fixed;
   top: 50%;
   left: 50%;
   transform :translate(-50%, -50%);
@@ -11,17 +11,16 @@
   z-index: -1;
 }
 
-video::before{
+.back::after{
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(from bottom rgba(0,0,0,0), to top rgba(0,0,0,1) 100%);
-  opacity: 0.5;
-  z-index: 0;
-} */
+  background: black;
+  z-index: -2;
+}
 
 .wording {
   position: absolute;

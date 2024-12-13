@@ -27,10 +27,10 @@ const Home = () => {
 
   return (
     <>
-      <div className="2xl:container bg-black mx-auto relative">
-        {/* <video muted autoPlay loop className="video">
-          <source src="https://videos.pexels.com/video-files/3129902/3129902-uhd_3840_2160_25fps.mp4" type="video/mp4"/>
-        </video> */}
+      <div className="2xl:container mx-auto relative back">
+        <video muted autoPlay loop className="video">
+          <source src="https://videos.pexels.com/video-files/2611250/2611250-uhd_2560_1440_30fps.mp4" type="video/mp4"/>
+        </video>
         <div className="absolute top-8 left-10">
           <h1 className="text-blue-600 text-[20px] font-[800] font-['Poppins']">
             Welcome to My Portfolio
