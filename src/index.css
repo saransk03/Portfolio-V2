@@ -44,3 +44,95 @@
     color: #2e020f;
 }
 
+.tech-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: black ;
+    width: 180px;
+    height: 45px;
+    border-bottom-left-radius: 20px ;
+}
+
+.tech-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 8px -5px black;
+}
+.tech-box::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 8px -5px black;
+}
+.link-box{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: black ;
+    width: 70px;
+    height: 70px;
+    border-top-left-radius: 50% ;
+}
+
+.link-box::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 8px 5px black;
+}
+
+.link-box::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 8px 5px black;
+}
+.project-box{
+    box-shadow: 0px 0px 0px rgba(157, 119, 130, 0.7) ;
+    transform: translateX(0) translateY(0);
+    transition: all 0.3s ease;
+}
+.project-box:hover{
+    /* box-shadow: -3px 3px 7px rgba(157, 119, 130, 0.5) ; */
+    transform: scale(1.09) translateY(-5px);
+    transition: all 0.3s ease;
+}
+.project-box:hover img{
+    transform: scale(1.05) translateY(-5px);
+    transition: all 0.3s ease;
+}
+.project-box:hover .project-text-h1{
+    color: #d4718f;
+    filter: drop-shadow( 0px 0px 5px rgba(157, 119, 130, 0.7));
+    transition: all 0.3s ease;
+}

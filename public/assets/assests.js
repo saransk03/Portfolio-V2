@@ -18,6 +18,13 @@ import ps from './ps.png'
 import github from './github.png'
 import canva from './canva.png'
 import figma from './figma.png'
+import youtube from './yt-clone.png'
+import watchweb from './watch-web.png'
+import weather from './weather.png'
+import freshveg from './fresh-veg.png'
+import karupatti from './karupatti.png'
+import portfoliov1 from './portfolio-1.png'
+import foodspot from './footspot.png'
 
 
 export const assests = {
@@ -40,6 +47,13 @@ export const assests = {
     github,
     figma,
     canva,
+    youtube,
     graphicdesign,
+    watchweb,
+    weather,
+    freshveg,
+    karupatti,
+    portfoliov1,
+    foodspot,
     // Add more assets here
 }
