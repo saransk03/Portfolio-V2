@@ -77,7 +77,7 @@ const Project = () => {
               EXPLORE MY PROJECT WORKS
             </p>
           </div>
-          <div className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5 gap-14 mt-5">
+          <div className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-14 mt-5">
             {projects.map((items, i) => {
               return (
                 <div className="flex flex-col gap-1.5 project-box">
