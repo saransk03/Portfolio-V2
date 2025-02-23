@@ -3,6 +3,7 @@
   background-color: #564147;
   background-blend-mode: overlay;
   background-size: cover;
+  z-index: 10;
 }
 .image {
   filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.7));

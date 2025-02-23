@@ -1,4 +1,5 @@
 import React from "react";
+import { delay, motion } from "motion/react";
 import Navbar from "./Navbar";
 import { FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -81,15 +82,40 @@ const Resume = () => {
             type="video/mp4"
           />
         </video>
-        <div className="w-[95%] grid grid-cols-1 mx-auto z-10">
-          <div className="flex flex-col justify-center items-center">
-            <h1 className="text-white text-[80px] font-[700] leading-none">
+        <motion.div
+          className="w-[95%] grid grid-cols-1 mx-auto z-10"
+          variants={{
+            hidden: { opacity: 0 },
+            show: { opacity: 1, transition: { staggerChildren: 0.3 } },
+          }}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.div className="flex flex-col justify-center items-center"
+          initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                ease: "easeIn",
+                type: "spring",
+                stiffness: 400,
+                damping: 10,
+                delay: 0.2,
+              }}>
+            <h1
+              className="text-white text-[80px] font-[700] leading-none"
+            >
               RESUME
             </h1>
-            <p className="text-[#b7667e] text-[20px] font-[700] tracking-[.4em] leading-none ">
+            <motion.p
+              className="text-[#b7667e] text-[20px] font-[700] tracking-[.4em] leading-none "
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeIn", delay: 0.3 }}
+            >
               CHECK MY RESUME
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
           <div className="w-[90%] mx-auto mt-4">
             <Link
               to={
@@ -174,48 +200,69 @@ const Resume = () => {
               </h1>
 
               <div className="bg-gray-900 relative bg-opacity-50 backdrop:blur-md px-3 py-10 rounded-[20px] mt-4 flex flex-col justify-center gap-8 head-icon">
+                <div className="font-['Poppins'] text-white px-24 flex justify-between gap-20 relative">
+                  <div className="flex flex-col items-start gap-1.5">
+                    <h1 className="font-[700] text-[22px] leading-6">
+                      B.TECH INFORMATION TECHNOLOGY
+                    </h1>
+                    <p className="text-[12px] font-[500]">
+                      The Kavery Engineering College, Salem
+                    </p>
+                    <p className="text-[12px] font-[500] text-[#b7667e]">
+                      <span className="font-[700]">CGPA</span> 8.1/10{" "}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[14px] font-[500] bg-gray-900 rounded-[5px] px-3 py-1">
+                      2020 - 2024
+                    </p>
+                  </div>
+                  <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#b7667e] shadow-[0px_0px_10px] bg-[#b7667e] z-20"></div>
+                </div>
 
-                    <div className="font-['Poppins'] text-white px-24 flex justify-between gap-20 relative">
-                        <div className="flex flex-col items-start gap-1.5">
-                          <h1 className="font-[700] text-[22px] leading-6">B.TECH INFORMATION TECHNOLOGY</h1>
-                          <p className="text-[12px] font-[500]">The Kavery Engineering College, Salem</p>
-                          <p className="text-[12px] font-[500] text-[#b7667e]"><span className="font-[700]">CGPA</span> 8.1/10 </p>
-                        </div>
-                        <div><p className="text-[14px] font-[500] bg-gray-900 rounded-[5px] px-3 py-1">2020 - 2024</p></div>
-                        <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#b7667e] shadow-[0px_0px_10px] bg-[#b7667e] z-20">
-                        </div>
-                    </div>
-                
-                    <div className="font-['Poppins'] text-white px-24 flex justify-between gap-20 relative">
-                        <div className="flex flex-col items-start gap-1.5">
-                          <h1 className="font-[700] text-[22px] leading-6">HSC (+2)</h1>
-                          <p className="text-[12px] font-[500]">Bharathi Matric Higher Secondary School, Kallakurichi</p>
-                          <p className="text-[12px] font-[500] text-[#b7667e]"><span className="font-[700]">PERCENTAGE</span> 75% </p>
-                        </div>
-                        <div><p className="text-[14px] font-[500] bg-gray-900 rounded-[5px] px-3 py-1">2019 - 2020</p></div>
-                        <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#b7667e] shadow-[0px_0px_10px] bg-[#b7667e] z-20">
-                        </div>
-                    </div>
-                
-                    <div className="font-['Poppins'] text-white px-24 flex justify-between items-start gap-20 relative">
-                        <div className="flex flex-col items-start gap-1.5">
-                          <h1 className="font-[700] text-[22px] leading-6">SSLC</h1>
-                          <p className="text-[12px] font-[500]">Bharathi Matric Higher Secondary School, Kallakurichi</p>
-                          <p className="text-[12px] font-[500] text-[#b7667e]"><span className="font-[700]">PERCENTAGE</span> 93% </p>
-                        </div>
-                        <div>
-                          <p className="text-[14px] font-[500] bg-gray-900 rounded-[5px] px-3 py-1">2017 - 2018</p>
-                        </div>
-                        <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#b7667e] shadow-[0px_0px_10px] bg-[#b7667e] z-20">
-                        </div>
-                    </div>
-                
-                    <div className="absolute left-14 bg-white w-[1px] h-[75%] z-10">
-                    </div>
+                <div className="font-['Poppins'] text-white px-24 flex justify-between gap-20 relative">
+                  <div className="flex flex-col items-start gap-1.5">
+                    <h1 className="font-[700] text-[22px] leading-6">
+                      HSC (+2)
+                    </h1>
+                    <p className="text-[12px] font-[500]">
+                      Bharathi Matric Higher Secondary School, Kallakurichi
+                    </p>
+                    <p className="text-[12px] font-[500] text-[#b7667e]">
+                      <span className="font-[700]">PERCENTAGE</span> 75%{" "}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[14px] font-[500] bg-gray-900 rounded-[5px] px-3 py-1">
+                      2019 - 2020
+                    </p>
+                  </div>
+                  <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#b7667e] shadow-[0px_0px_10px] bg-[#b7667e] z-20"></div>
+                </div>
+
+                <div className="font-['Poppins'] text-white px-24 flex justify-between items-start gap-20 relative">
+                  <div className="flex flex-col items-start gap-1.5">
+                    <h1 className="font-[700] text-[22px] leading-6">SSLC</h1>
+                    <p className="text-[12px] font-[500]">
+                      Bharathi Matric Higher Secondary School, Kallakurichi
+                    </p>
+                    <p className="text-[12px] font-[500] text-[#b7667e]">
+                      <span className="font-[700]">PERCENTAGE</span> 93%{" "}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[14px] font-[500] bg-gray-900 rounded-[5px] px-3 py-1">
+                      2017 - 2018
+                    </p>
+                  </div>
+                  <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#b7667e] shadow-[0px_0px_10px] bg-[#b7667e] z-20"></div>
+                </div>
+
+                <div className="absolute left-14 bg-white w-[1px] h-[75%] z-10"></div>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

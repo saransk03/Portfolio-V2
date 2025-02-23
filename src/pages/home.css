@@ -27,12 +27,12 @@ video{
   top: 50%;
   left: 50%;
   transform :translate(-50%, -50%);
-  height: 500px; /* Same as image size */
-  width: 500px; /* Same as image size */
+  height: 80px; /* Same as image size */
+  width: 80px; /* Same as image size */
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: animate 17s linear infinite;
+  animation: animate 6s linear infinite;
 }
 @keyframes animate {
   0% {
@@ -46,17 +46,13 @@ video{
 .letter {
   color: white;
   position: absolute;
-  top: 40px;
+  top: 50%;
   left: 50%;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   display: inline-block;
-  transform-origin: 0 210px;
-}
-.profile img {
-  position: relative;
-  z-index: 1;
+  transform-origin: 0 70px;
 }
 
 .items{
