@@ -19,14 +19,14 @@ const Home = () => {
 
   return (
     <>
-    <SplashCursor/>
     <HomeNav/>
       <div className="2xl:container mx-auto relative back">
-        
-        <div
-          className="w-[80%] h-[100vh]  mx-auto flex justify-center items-center relative profile"
-        >
-          
+        <div className="w-[90%] h-auto mx-auto mt-[40px] ">
+            <div className="w-[80%] h-full mx-auto flex flex-col justify-center leading-none">
+              <h1 className="text-white text-[20px] text-left font-['Poppins'] leading-none">Hello, I'm Sarankumar</h1>
+              <h1 className="text-white text-center text-[240px] font-['Poppins']">Frontend Developer</h1>
+              <h1 className="text-white text-[20px] text-right font-['Poppins']">Based in India</h1>
+            </div>
         </div>
 {/*         
         <div className="absolute right-10 top-0 flex flex-col items-center justify-center">
@@ -49,7 +49,8 @@ const Home = () => {
             </a>
           </div>
 
-        </div> */}
+        </div> 
+        */}
        
       </div>
     </>
