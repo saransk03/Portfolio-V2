@@ -66,7 +66,7 @@ const About = () => {
                 ABOUT
               </h1>
               <motion.p
-                className="text-[#b7667e] text-[20px] font-[700] tracking-[.3em] leading-none"
+                className="text-[#9611f5] text-[20px] font-[700] tracking-[.3em] leading-none"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeIn", delay: 0.3 }}
@@ -102,7 +102,7 @@ const About = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.3 }}
               >
-                <MdDoubleArrow className="text-[22px] text-[#b7667e] font-extrabold" />
+                <MdDoubleArrow className="text-[22px] text-[#9611f5] font-extrabold" />
                 <span className="font-[700] ">Full Name :</span> SARANKUMAR M
               </motion.p>
               <motion.p
@@ -111,7 +111,7 @@ const About = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}
               >
-                <MdDoubleArrow className="text-[22px] text-[#b7667e] font-extrabold" />
+                <MdDoubleArrow className="text-[22px] text-[#9611f5] font-extrabold" />
                 <span className="font-[700]">Experience :</span> Fresher
               </motion.p>
               <motion.p
@@ -120,7 +120,7 @@ const About = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.5 }}
               >
-                <MdDoubleArrow className="text-[22px] text-[#b7667e] font-extrabold" />
+                <MdDoubleArrow className="text-[22px] text-[#9611f5] font-extrabold" />
                 <span className="font-[700] ">City :</span> Chennai, Tamil Nadu
               </motion.p>
             </div>
@@ -132,7 +132,7 @@ const About = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.6 }}
               >
-                <MdDoubleArrow className="text-[22px] text-[#b7667e] font-extrabold" />
+                <MdDoubleArrow className="text-[22px] text-[#9611f5] font-extrabold" />
                 <span className="font-[700] ">Degree :</span> B. Tech, IT
               </motion.p>
               <motion.p
@@ -141,7 +141,7 @@ const About = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.7 }}
               >
-                <MdDoubleArrow className="text-[22px] text-[#b7667e] font-extrabold" />
+                <MdDoubleArrow className="text-[22px] text-[#9611f5] font-extrabold" />
                 <span className="font-[700] ">Language :</span> Tamil, English
               </motion.p>
               <motion.p
@@ -150,7 +150,7 @@ const About = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.8 }}
               >
-                <MdDoubleArrow className="text-[22px] text-[#b7667e] font-extrabold" />
+                <MdDoubleArrow className="text-[22px] text-[#9611f5] font-extrabold" />
                 <span className="font-[700]">Email :</span> saransk753@gmail.com
               </motion.p>
             </div>
@@ -158,7 +158,7 @@ const About = () => {
 
           <div className="mt-8 px-4">
             <motion.h1
-              className="font-['Poppins'] font-[700] text-[22px] text-[#b7667e]"
+              className="font-['Poppins'] font-[700] text-[22px] text-[#9611f5]"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}

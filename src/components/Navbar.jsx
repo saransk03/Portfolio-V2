@@ -7,7 +7,7 @@ import { assests } from "../../public/assets/assests";
 const Navbar = () => {
   return (
     <>
-      <motion.div className="w-[300px] h-full hidden lg:block fixed top-0 left-0 mx-auto navbar"
+      <motion.div className="w-[280px] h-[90%] my-[1%] hidden lg:block fixed top-5 left-7 mx-auto navbar"
       variants={{
         hidden: { opacity: 0},
         show: { opacity: 1, transition: { staggerChildren: 0.3 } },

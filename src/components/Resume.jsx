@@ -108,7 +108,7 @@ const Resume = () => {
               RESUME
             </h1>
             <motion.p
-              className="text-[#b7667e] text-[20px] font-[700] tracking-[.4em] leading-none "
+              className="text-[#9611f5] text-[20px] font-[700] tracking-[.4em] leading-none "
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeIn", delay: 0.3 }}
@@ -125,22 +125,22 @@ const Resume = () => {
               className="py-4"
             >
               <button className="text-white text-[17px] font-['Poppins'] font-[600] bg-gray-900 bg-opacity-50 backdrop:blur-md px-3 py-3 rounded-lg btn flex justify-center items-center gap-3">
-                <FaEye className="text-[20px] text-[#b7667e] eye-icon" /> View
+                <FaEye className="text-[20px] text-[#9611f5] eye-icon" /> View
                 Resume
               </button>
             </Link>
             <div className="mt-8">
               <h1 className="text-white text-[28px] font-['Poppins'] font-[700] flex justify-start items-center gap-3">
                 <span className="bg-gray-900 bg-opacity-50 backdrop:blur-md p-3 rounded-lg head-icon">
-                  <IoSchool className="text-[#b7667e] text-[22px]" />
+                  <IoSchool className="text-[#9611f5] text-[22px]" />
                 </span>{" "}
                 SKILLS
               </h1>
               <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 mt-4">
                 <div className="relative bg-gray-900 bg-opacity-50 backdrop:blur-md px-3 py-5 rounded-[20px] flex justify-center items-center gap-3 head-icon">
-                  <div className="flex justify-center items-center gap-2 absolute right-14 top-[-22px] bg-[#b7667e] font-['Poppins'] rounded-[20px] font-[700] px-4 py-2">
-                    <FaLaptopCode className="text-[19px] text-[#2e020f]" />
-                    <p className="text-[#2e020f]">LANGUAGE</p>
+                  <div className="flex justify-center items-center gap-2 absolute right-14 top-[-22px] bg-[#8600E4] font-['Poppins'] rounded-[20px] font-[700] px-4 py-2">
+                    <FaLaptopCode className="text-[19px] text-[#ffffff]" />
+                    <p className="text-[#ffffff]">LANGUAGE</p>
                   </div>
                   <div className="flex justify-center items-center flex-wrap gap-14 py-6">
                     {skills.map((items, index) => {
@@ -164,9 +164,9 @@ const Resume = () => {
                 </div>
 
                 <div className="relative bg-gray-900 bg-opacity-50 backdrop:blur-md px-3 py-5 rounded-[20px] flex justify-center items-center gap-3 head-icon">
-                  <div className="flex justify-center items-center gap-2 absolute left-14 top-[-22px] bg-[#b7667e] font-['Poppins'] rounded-[20px] font-[700] px-4 py-2">
-                    <CgToolbox className="text-[19px] text-[#2e020f]" />
-                    <p className="text-[#2e020f]">SOFTWARE</p>
+                  <div className="flex justify-center items-center gap-2 absolute left-14 top-[-22px] bg-[#8600E4] font-['Poppins'] rounded-[20px] font-[700] px-4 py-2">
+                    <CgToolbox className="text-[19px] text-white" />
+                    <p className="text-white">SOFTWARE</p>
                   </div>
                   <div className="flex justify-center items-center flex-wrap gap-14 py-6">
                     {tools.map((items, index) => {
@@ -194,7 +194,7 @@ const Resume = () => {
             <div className="mt-8">
               <h1 className="text-white text-[28px] font-['Poppins'] font-[700] flex justify-start items-center gap-3">
                 <span className="bg-gray-900 bg-opacity-50 backdrop:blur-md p-3 rounded-lg head-icon">
-                  <LiaSchoolSolid className="text-[#b7667e] text-[22px]" />
+                  <LiaSchoolSolid className="text-[#9611f5] text-[22px]" />
                 </span>{" "}
                 EDUCATION
               </h1>
@@ -208,7 +208,7 @@ const Resume = () => {
                     <p className="text-[12px] font-[500]">
                       The Kavery Engineering College, Salem
                     </p>
-                    <p className="text-[12px] font-[500] text-[#b7667e]">
+                    <p className="text-[12px] font-[500] text-[#9611f5]">
                       <span className="font-[700]">CGPA</span> 8.1/10{" "}
                     </p>
                   </div>
@@ -217,7 +217,7 @@ const Resume = () => {
                       2020 - 2024
                     </p>
                   </div>
-                  <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#b7667e] shadow-[0px_0px_10px] bg-[#b7667e] z-20"></div>
+                  <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#8600E4] shadow-[0px_0px_10px] bg-[#9611f5] z-20"></div>
                 </div>
 
                 <div className="font-['Poppins'] text-white px-24 flex justify-between gap-20 relative">
@@ -228,7 +228,7 @@ const Resume = () => {
                     <p className="text-[12px] font-[500]">
                       Bharathi Matric Higher Secondary School, Kallakurichi
                     </p>
-                    <p className="text-[12px] font-[500] text-[#b7667e]">
+                    <p className="text-[12px] font-[500] text-[#9611f5]">
                       <span className="font-[700]">PERCENTAGE</span> 75%{" "}
                     </p>
                   </div>
@@ -237,7 +237,7 @@ const Resume = () => {
                       2019 - 2020
                     </p>
                   </div>
-                  <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#b7667e] shadow-[0px_0px_10px] bg-[#b7667e] z-20"></div>
+                  <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#8600E4] shadow-[0px_0px_10px] bg-[#9611f5] z-20"></div>
                 </div>
 
                 <div className="font-['Poppins'] text-white px-24 flex justify-between items-start gap-20 relative">
@@ -246,7 +246,7 @@ const Resume = () => {
                     <p className="text-[12px] font-[500]">
                       Bharathi Matric Higher Secondary School, Kallakurichi
                     </p>
-                    <p className="text-[12px] font-[500] text-[#b7667e]">
+                    <p className="text-[12px] font-[500] text-[#9611f5]">
                       <span className="font-[700]">PERCENTAGE</span> 93%{" "}
                     </p>
                   </div>
@@ -255,7 +255,7 @@ const Resume = () => {
                       2017 - 2018
                     </p>
                   </div>
-                  <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#b7667e] shadow-[0px_0px_10px] bg-[#b7667e] z-20"></div>
+                  <div className="absolute left-[34px] w-5 h-5 rounded-[50%] shadow-[#8600E4] shadow-[0px_0px_10px] bg-[#9611f5] z-20"></div>
                 </div>
 
                 <div className="absolute left-14 bg-white w-[1px] h-[75%] z-10"></div>

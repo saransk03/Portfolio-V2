@@ -25,10 +25,12 @@ import freshveg from './fresh-veg.jpg'
 import karupatti from './karupatti.jpg'
 import portfoliov1 from './portfolio-1.jpg'
 import foodspot from './foodspot.jpg'
+import home from './home.png'
 
 
 export const assests = {
     portfolio,
+    home,
     background,
     frontend,
     webdevelop,

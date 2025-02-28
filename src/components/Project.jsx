@@ -94,7 +94,7 @@ const Project = () => {
               PROJECTS
             </motion.h1>
             <motion.p
-              className="text-[#b7667e] text-[20px] font-[700] tracking-[.16em] leading-none"
+              className="text-[#9611f5] text-[20px] font-[700] tracking-[.16em] leading-none"
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -120,7 +120,7 @@ const Project = () => {
                       className="w-[340px] h-[230px] object-cover"
                     />
                     <div className="tech-box">
-                      <div className="px-3 py-1 font-['Poppins'] rounded-[20px] font-[600] text-[8px] bg-[#b7667e]">
+                      <div className="px-3 py-1 font-['Poppins'] text-white rounded-[20px] font-[600] text-[8px] bg-[#8600E4]">
                         {items.tech_1}
                       </div>
                       <div className="px-3 py-1 font-['Poppins'] rounded-[20px] font-[600] text-[8px] bg-sky-500">
@@ -130,7 +130,7 @@ const Project = () => {
                     <div className="link-box">
                       <Link to={items.link} target="_blank">
                         <motion.div
-                          className="w-[50px] h-[50px] rounded-[50%] flex justify-center items-center bg-green-700"
+                          className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-green-700"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           transition={{
@@ -139,7 +139,7 @@ const Project = () => {
                             damping: 10,
                           }}
                         >
-                          <HiOutlineExternalLink className="text-[26px] text-white" />
+                          <HiOutlineExternalLink className="text-[20px] text-white" />
                         </motion.div>
                       </Link>
                     </div>

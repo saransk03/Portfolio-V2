@@ -1,9 +1,11 @@
 .navbar {
   background-image: url(https://i.pinimg.com/736x/1a/a1/f5/1aa1f58d054a26afe52d7de12697102f.jpg);
-  background-color: #564147;
+  background-color: #4B0082;
+  box-shadow: 0px 0px 20px rgba(148, 15, 242, 0.7);
   background-blend-mode: overlay;
   background-size: cover;
   z-index: 10;
+  border-radius:60px 60px;
 }
 .image {
   filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.7));

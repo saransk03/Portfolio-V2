@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "./Navbar";
+import { ToastContainer, toast } from 'react-toastify';
 import { IoLocationSharp } from "react-icons/io5";
 import { HiPhone } from "react-icons/hi2";
 import { MdEmail } from "react-icons/md";
@@ -10,6 +11,42 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
+  const formRef = useRef(null)
+    
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "55147d81-3f83-44d2-b862-e3bcbcd4c499");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      toast.success("Hooray! Your form has been submitted 🎉", {
+        position: "top-right",
+        autoClose: 3000, // Auto close after 3 seconds
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "dark",
+      })
+
+      formRef.current.reset();
+      // console.log("Success", res); 
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -46,7 +83,7 @@ const Contact = () => {
               CONTACT
             </motion.h1>
             <motion.p
-              className="text-[#b7667e] text-[20px] font-[700] tracking-[.9em] leading-none "
+              className="text-[#9611f5] text-[20px] font-[700] tracking-[.9em] leading-none "
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -63,25 +100,25 @@ const Contact = () => {
           </div>
           <div className="w-[70%] mx-auto flex justify-center items-center gap-10 mt-12">
             <div className="flex font-['Poppins'] flex-col justify-center items-center gap-3">
-              <h1 className="text-[20px] shadow-[#b7667e]  drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#b7667e]">
+              <h1 className="text-[20px] shadow-[#8600E4]  drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#9611f5]">
                 <HiPhone className="text-[23px]" /> Phone No
               </h1>
               <p className="text-[15px] font-[600] text-white">
                 +91 9514053103
               </p>
             </div>
-            <div className="bg-[#b7667e] w-0.5 h-24 shadow-[#b7667e] shadow-[0px_0px_10px]"></div>
+            <div className="bg-[#8600E4] w-0.5 h-24 shadow-[#8600E4] shadow-[0px_0px_10px]"></div>
             <div className="flex font-['Poppins'] flex-col justify-center items-center gap-3">
-              <h1 className="text-[20px] shadow-[#b7667e]  drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#b7667e]">
+              <h1 className="text-[20px] shadow-[#8600E4]  drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#9611f5]">
                 <IoLocationSharp className="text-[23px]" /> Address
               </h1>
               <p className="text-[15px] font-[600] text-white">
                 Chennai, Tamil Nadu
               </p>
             </div>
-            <div className="bg-[#b7667e] w-0.5 h-24 shadow-[#b7667e] shadow-[0px_0px_10px]"></div>
+            <div className="bg-[#8600E4] w-0.5 h-24 shadow-[#8600E4] shadow-[0px_0px_10px]"></div>
             <div className="flex font-['Poppins'] flex-col justify-center items-center gap-3">
-              <h1 className="text-[20px] shadow-[#b7667e]  drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#b7667e]">
+              <h1 className="text-[20px] shadow-[#8600E4]  drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#9611f5]">
                 <MdEmail className="text-[23px]" /> Email
               </h1>
               <p className="text-[15px] font-[600] text-white">
@@ -91,18 +128,21 @@ const Contact = () => {
           </div>
           <div className="w-[60%] mx-auto mt-10">
             <div className="bg-gray-900 bg-opacity-50 backdrop:blur-md py-6 px-6 rounded-[20px] head-icon font-['Poppins']">
-              <h1 className="text-[24px] shadow-[#b7667e] py-2 drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#b7667e]">
+              <h1 className="text-[24px] shadow-[#8600E4] py-2 drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#9611f5]">
                 Send a Message
               </h1>
-              <form className="flex flex-col items-center gap-5">
+              <form ref={formRef} className="flex flex-col items-center gap-5" onSubmit={onSubmit}>
                 <div className="w-full grid grid-col-1 lg:grid-cols-2 gap-5 mt-4">
                   <input
                     type="text"
+                    name="firstname"
                     placeholder="First Name"
-                    className="w-full text-[14px] p-2 rounded-xl bg-transparent border outline-none text-white"
+                    className="w-full text-[14px] p-2 rounded-xl capitalize bg-transparent border outline-none text-white"
+                    required
                   />
                   <input
                     type="text"
+                    name="lastname"
                     placeholder="Last Name (Optional)"
                     className="w-full text-[14px] p-2 rounded-xl bg-transparent border outline-none text-white"
                   />
@@ -110,36 +150,41 @@ const Contact = () => {
                 <div className="w-full grid grid-col-1 lg:grid-cols-2 gap-5 ">
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email"
                     className="w-full text-[14px] p-2 rounded-xl bg-transparent border outline-none text-white"
+                    required
                   />
                   <input
                     type="text"
+                    name="Phone number"
                     placeholder="Phone Number"
                     className="w-full text-[14px] p-2 rounded-xl bg-transparent border outline-none text-white"
                   />
                 </div>
                 <textarea
-                  name="text"
+                  name="message"
+                  type="text"
                   placeholder="Message"
-                  className="w-full text-[14px] p-2 min-h-28 rounded-xl bg-transparent border outline-none text-white"
-                  id=""
+                  className="w-full text-[14px] capitalize p-2 min-h-28 rounded-xl bg-transparent border outline-none text-white"
+                  required
                 ></textarea>
                 <motion.button
-                  className="px-3 py-1.5 bg-green-800 flex justify-center items-center gap-1 text-white text-[15px] rounded-[20px]
+                  className="px-3 py-1.5 bg-green-800 flex justify-center items-center gap-1 text-white text-[15px] rounded-[20px] font-semibold
                     hover:shadow-green-800 hover:shadow-[0px_0px_15px]"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <LuSend className="text-[15px]" />
+                  <LuSend className="text-[15px] font-bold" />
                   Submit
                 </motion.button>
               </form>
+              <ToastContainer />
             </div>
           </div>
           <div className="w-[70%] mx-auto grid grid-cols-1 mt-6">
-            <h1 className="text-[24px] shadow-[#b7667e] py-2 drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#b7667e]">
+            <h1 className="text-[24px] shadow-[#8600E4] py-2 drop-shadow-[0px_0px_10px] font-[700] flex gap-2 justify-center items-center text-[#9611f5]">
               Connect With Me
             </h1>
             <div className="flex justify-center items-center gap-6 mt-5">
@@ -151,7 +196,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <MdEmail className="text-[22px] text-white group-hover:text-[#b7667e] shadow-white drop-shadow-[0px_0px_10px]" />
+                  <MdEmail className="text-[22px] text-white group-hover:text-[#8600E4] shadow-white drop-shadow-[0px_0px_10px]" />
                 </motion.d>
               </Link>
 
@@ -165,7 +210,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <FaLinkedinIn className="text-[22px] text-white group-hover:text-[#b7667e] shadow-white drop-shadow-[0px_0px_10px]" />
+                  <FaLinkedinIn className="text-[22px] text-white group-hover:text-[#8600E4] shadow-white drop-shadow-[0px_0px_10px]" />
                 </motion.div>
               </Link>
 
@@ -176,7 +221,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <FaGithub className="text-[22px] text-white group-hover:text-[#b7667e] shadow-white drop-shadow-[0px_0px_10px]" />
+                  <FaGithub className="text-[22px] text-white group-hover:text-[#8600E4] shadow-white drop-shadow-[0px_0px_10px]" />
                 </motion.div>
               </Link>
 
@@ -190,7 +235,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <AiFillInstagram className="text-[22px] text-white group-hover:text-[#b7667e] shadow-white drop-shadow-[0px_0px_10px]" />
+                  <AiFillInstagram className="text-[22px] text-white group-hover:text-[#8600E4] shadow-white drop-shadow-[0px_0px_10px]" />
                 </motion.div>
               </Link>
             </div>

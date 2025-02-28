@@ -9,7 +9,12 @@ body{
 .head-icon{
     box-shadow: inset 0.5px 0.5px 0px rgba(255, 255, 255, 0.7);
 }
-
+.home-img{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .btn{
     box-shadow: inset 0.5px 0.5px 0px rgba(255, 255, 255, 0.7);
     overflow: hidden;
@@ -17,7 +22,7 @@ body{
     transition: all 0.3s ease;
 }
 .btn::after{
-    background-color: #b7667e;
+    background-color: #8600E4;
     border-radius: 8px;
     content: '';
     display: block;
@@ -45,7 +50,7 @@ body{
     will-change :transform;
 }
 .btn:hover .eye-icon{
-    color: #2e020f;
+    color: #ffffff;
 }
 
 .tech-box{
@@ -58,7 +63,7 @@ body{
     gap: 8px;
     background-color: black ;
     width: 180px;
-    height: 45px;
+    height: 35px;
     border-bottom-left-radius: 20px ;
 }
 
@@ -68,7 +73,7 @@ body{
     top: 0;
     left: -30px;
     width: 30px;
-    height: 30px;
+    height: 24px;
     background-color: transparent;
     border-top-right-radius: 20px;
     box-shadow: 8px -5px black;
@@ -93,8 +98,8 @@ body{
     align-items: center;
     gap: 8px;
     background-color: black ;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-top-left-radius: 50% ;
 }
 
@@ -122,7 +127,7 @@ body{
     box-shadow: 8px 5px black;
 }
 .project-box{
-    box-shadow: 0px 0px 0px rgba(157, 119, 130, 0.7) ;
+    box-shadow: 0px 0px 0px rgba(148, 15, 242, 0.7) ;
     transform: translateX(0) translateY(0);
     transition: all 0.3s ease;
 }
@@ -136,7 +141,7 @@ body{
     transition: all 0.3s ease;
 }
 .project-box:hover .project-text-h1{
-    color: #d4718f;
-    filter: drop-shadow( 0px 0px 5px rgba(157, 119, 130, 0.7));
+    color: #9611f5;
+    filter: drop-shadow( 0px 0px 5px rgba(148, 15, 242, 0.7));
     transition: all 0.3s ease;
 }

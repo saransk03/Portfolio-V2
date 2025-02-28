@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./home.css";
-import VanillaTilt from "vanilla-tilt";
 import { motion } from "motion/react";
 import { assests } from "../../public/assets/assests";
 import { FaLinkedinIn, FaLaptopCode, FaPhoneAlt } from "react-icons/fa";
@@ -10,7 +9,6 @@ import { IoIosContact } from "react-icons/io";
 import { IoSchool } from "react-icons/io5";
 import { PiReadCvLogoDuotone } from "react-icons/pi";
 import { Link } from "react-router-dom";
-import SplashCursor from "../blocks/TailwindAnimations/SplashCursor/SplashCursor";
 import HomeNav from "../components/HomeNav";
 
 const Home = () => {
@@ -21,7 +19,8 @@ const Home = () => {
     <>
     <HomeNav/>
       <div className="2xl:container mx-auto relative back">
-        <div className="w-[90%] h-auto mx-auto mt-[40px] ">
+        <div className="w-[90%] h-auto mx-auto relative mt-[40px] ">
+          <img src={assests.home} alt="boy" className="absolute w-[450px] home-img" />
             <div className="w-[80%] h-full mx-auto flex flex-col justify-center leading-none">
               <h1 className="text-white text-[20px] text-left font-['Poppins'] leading-none">Hello, I'm Sarankumar</h1>
               <h1 className="text-white text-center text-[240px] font-['Poppins']">Frontend Developer</h1>
