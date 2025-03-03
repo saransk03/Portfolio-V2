@@ -9,7 +9,7 @@ const HomeNav = () => {
   return (
     <>
         <div className='2xl:container mx-auto my-4'>
-            <div className='w-[35%] mx-auto rounded-[50px] bg-[#004A87] px-2 py-2'>
+            <div className='w-[35%] mx-auto rounded-[50px] bg-[#8600E4] px-2 py-2'>
                 <ul className='flex justify-around items-center'>
                     <Link to={"/about"}>
                         <li>

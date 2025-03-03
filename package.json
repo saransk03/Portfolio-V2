@@ -10,13 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/rapier": "^1.5.0",
+    "meshline": "^3.3.1",
     "motion": "^11.13.5",
+    "postprocessing": "^6.37.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
     "react-toastify": "^11.0.5",
     "react-vanilla-tilt": "^1.0.0",
     "tailwindcss-text-indent": "^1.0.2",
+    "three": "^0.167.1",
     "vanilla-tilt": "^1.8.1"
   },
   "devDependencies": {

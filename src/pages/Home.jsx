@@ -10,24 +10,106 @@ import { IoSchool } from "react-icons/io5";
 import { PiReadCvLogoDuotone } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import HomeNav from "../components/HomeNav";
+import Hyperspeed from "../blocks/Backgrounds/Hyperspeed/Hyperspeed";
 
 const Home = () => {
-
-
-
   return (
     <>
-    <HomeNav/>
+      <HomeNav />
+      <Hyperspeed
+        effectOptions={{
+          onSpeedUp: () => {},
+
+          onSlowDown: () => {},
+
+          distortion: "turbulentDistortion",
+
+          length: 500,
+
+          roadWidth: 10,
+
+          islandWidth: 2,
+
+          lanesPerRoad: 4,
+
+          fov: 90,
+
+          fovSpeedUp: 150,
+
+          speedUp: 2,
+
+          carLightsFade: 0.4,
+
+          totalSideLightSticks: 20,
+
+          lightPairsPerRoadWay: 40,
+
+          shoulderLinesWidthPercentage: 0.05,
+
+          brokenLinesWidthPercentage: 0.1,
+
+          brokenLinesLengthPercentage: 0.5,
+
+          lightStickWidth: [0.12, 0.5],
+
+          lightStickHeight: [1.3, 1.7],
+
+          movingAwaySpeed: [60, 80],
+
+          movingCloserSpeed: [-120, -160],
+
+          carLightsLength: [400 * 0.03, 400 * 0.2],
+
+          carLightsRadius: [0.05, 0.14],
+
+          carWidthPercentage: [0.3, 0.5],
+
+          carShiftX: [-0.8, 0.8],
+
+          carFloorSeparation: [0, 5],
+
+          colors: {
+            roadColor: 0x080808,
+
+            islandColor: 0x0a0a0a,
+
+            background: 0x000000,
+
+            shoulderLines: 0xffffff,
+
+            brokenLines: 0xffffff,
+
+            leftCars: [0xd856bf, 0x6750a2, 0xc247ac],
+
+            rightCars: [0x03b3c3, 0x0e5ea5, 0x324555],
+
+            sticks: 0x03b3c3,
+          },
+        }}
+      />
       <div className="2xl:container mx-auto relative back">
-        <div className="w-[90%] h-auto mx-auto relative mt-[40px] ">
-          <img src={assests.home} alt="boy" className="absolute w-[450px] home-img" />
-            <div className="w-[80%] h-full mx-auto flex flex-col justify-center leading-none">
-              <h1 className="text-white text-[20px] text-left font-['Poppins'] leading-none">Hello, I'm Sarankumar</h1>
-              <h1 className="text-white text-center text-[240px] font-['Poppins']">Frontend Developer</h1>
-              <h1 className="text-white text-[20px] text-right font-['Poppins']">Based in India</h1>
-            </div>
+        <div className="w-[90%] mx-auto relative mt-[40px] ">
+          <img
+            src={assests.home}
+            alt="boy"
+            className="absolute w-[450px] home-img"
+          />
+          <div className="w-[80%] mx-auto flex flex-col justify-center items-center leading-none">
+            <p className="text-white text-[20px] text-left font-['Poppins'] leading-none">
+              Hello, I'm Sarankumar
+            </p>
+            <h1 className="text-white text-center text-[240px] home-head mt-5 leading-[1]">
+              Frontend
+            </h1>
+            <p className="text-white text-center text-[240px] home-text leading-[0.9]">
+              Developer
+            </p>
+            <p className="text-white text-[20px] text-right pr-8 font-['Poppins']">
+              Based in India
+            </p>
+          </div>
         </div>
-{/*         
+        {/*         
         <div className="absolute right-10 top-0 flex flex-col items-center justify-center">
 
           <div className="flex flex-col gap-3 ">
@@ -50,7 +132,6 @@ const Home = () => {
 
         </div> 
         */}
-       
       </div>
     </>
   );
