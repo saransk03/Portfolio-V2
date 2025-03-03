@@ -13,22 +13,22 @@ const HomeNav = () => {
                 <ul className='flex justify-around items-center'>
                     <Link to={"/about"}>
                         <li>
-                        <IoIosContact className='text-white text-[26px]'/>
+                        <IoIosContact className='text-black text-[26px]'/>
                         </li>
                     </Link>
                     <Link to={"/resume"}>
                         <li>
-                        <SiReaddotcv className='text-white text-[24px]'/>
+                        <SiReaddotcv className='text-black text-[24px]'/>
                         </li>
                     </Link>
                     <Link to={"/projects"}>
                         <li>
-                        <RiAppsFill className='text-white text-[24px]'/>
+                        <RiAppsFill className='text-black text-[24px]'/>
                         </li>
                     </Link>
                     <Link to={"/contact"}>
                         <li>
-                        <PiPhoneIncomingFill className='text-white text-[24px]'/>
+                        <PiPhoneIncomingFill className='text-black text-[24px]'/>
                         </li>
                     </Link>
                   

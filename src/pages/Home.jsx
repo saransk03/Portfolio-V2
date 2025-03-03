@@ -88,50 +88,52 @@ const Home = () => {
         }}
       />
       <div className="2xl:container mx-auto relative back">
-        <div className="w-[90%] mx-auto relative mt-[40px] ">
+        <div className="w-[90%] mx-auto relative mt-[45px] ">
           <img
             src={assests.home}
             alt="boy"
             className="absolute w-[450px] home-img"
           />
-          <div className="w-[80%] mx-auto flex flex-col justify-center items-center leading-none">
-            <p className="text-white text-[20px] text-left font-['Poppins'] leading-none">
+          <div className="w-[80%] mx-auto flex flex-col justify-center leading-none">
+            <p className="text-white text-[20px] ml-[-30px] font-['Poppins'] leading-none">
               Hello, I'm Sarankumar
             </p>
-            <h1 className="text-white text-center text-[240px] home-head mt-5 leading-[1]">
-              Frontend
-            </h1>
-            <p className="text-white text-center text-[240px] home-text leading-[0.9]">
-              Developer
-            </p>
+           <div className="flex flex-col justify-center items-center">
+              <h1 className="text-white text-center text-[240px] home-head mt-3  leading-[1]">
+                Frontend
+              </h1>
+              <p className="text-white text-center text-[240px] home-text leading-[0.9]">
+                Developer
+              </p>
+           </div>
             <p className="text-white text-[20px] text-right pr-8 font-['Poppins']">
               Based in India
             </p>
           </div>
         </div>
-        {/*         
-        <div className="absolute right-10 top-0 flex flex-col items-center justify-center">
+                
+        <div className="home-links flex flex-col items-center justify-center gap-8">
 
           <div className="flex flex-col gap-3 ">
             <a href="https://www.linkedin.com/in/sarankumar-m/" target="_blank">
-              <div className="w-[40px] h-[40px] flex justify-center items-center rounded-md border-2 border-blue-600 group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-sky-500 transition-all duration-300">
+              <div className="w-[40px] h-[40px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300">
                 <FaLinkedinIn className="text-[20px] text-white group-hover:text-[22px] transition-all duration-300" />
               </div>
             </a>
             <a href="https://github.com/saransk03" target="_blank">
-              <div className="w-[40px] h-[40px] flex justify-center items-center rounded-md border-2 border-blue-600 group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-sky-500 transition-all duration-300">
+              <div className="w-[40px] h-[40px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300">
                 <FaGithub className="text-[20px] text-white group-hover:text-[22px] transition-all duration-300" />
               </div>
             </a>
             <a href="mailto:saransk753@gmail.com" target="_blank">
-              <div className="w-[40px] h-[40px] flex justify-center items-center rounded-md border-2 border-blue-600 group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-sky-500 transition-all duration-300">
+              <div className="w-[40px] h-[40px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300">
                 <MdAlternateEmail className="text-[20px] text-white group-hover:text-[22px] transition-all duration-300" />
               </div>
             </a>
           </div>
 
         </div> 
-        */}
+       
       </div>
     </>
   );
