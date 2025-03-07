@@ -125,7 +125,7 @@ const Home = () => {
                 <FaGithub className="text-[20px] text-white group-hover:text-[22px] transition-all duration-300" />
               </div>
             </a>
-            <a href="mailto:saransk3103@gmail.com" target="_blank">
+            <a href="mailto:saransk753@gmail.com" target="_blank">
               <div className="w-[40px] h-[40px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300">
                 <MdAlternateEmail className="text-[20px] text-white group-hover:text-[22px] transition-all duration-300" />
               </div>

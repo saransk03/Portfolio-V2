@@ -158,3 +158,37 @@ body{
     filter: drop-shadow( 0px 0px 5px rgba(148, 15, 242, 0.7));
     transition: all 0.3s ease;
 }
+
+.items-nav{
+    color: white;
+    position: relative;
+}
+.items-nav:hover{
+    color: #8600E4;
+    cursor: pointer;
+    filter: drop-shadow( 0px 0px 10px rgba(148, 15, 242, 1));
+    transition: all 0.3s ease;
+}
+.sub-name{
+    position: absolute;
+    background-color: transparent;
+    padding: 3px 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #8600E4;
+    border: #8600E4 2px solid;
+    font-size: 10px;
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+.items-nav:hover .sub-name{
+    top: 38px;
+    opacity: 1 !important;
+    transition: all 0.3s ease;
+}

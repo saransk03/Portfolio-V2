@@ -9,26 +9,30 @@ const HomeNav = () => {
   return (
     <>
         <div className='2xl:container mx-auto my-4'>
-            <div className='w-[35%] mx-auto rounded-[50px] bg-[#8600E4] px-2 py-2'>
+            <div className='w-[35%] mx-auto rounded-[150px] border-[3px] border-[#8600E4] px-2 py-2'>
                 <ul className='flex justify-around items-center'>
                     <Link to={"/about"}>
-                        <li>
-                        <IoIosContact className='text-black text-[26px]'/>
+                        <li className='relative items-nav'>
+                        <IoIosContact className=' text-[26px]'/>
+                        <p className='sub-name'>About</p>
                         </li>
                     </Link>
                     <Link to={"/resume"}>
-                        <li>
-                        <SiReaddotcv className='text-black text-[24px]'/>
+                        <li className='relative items-nav'>
+                        <SiReaddotcv className='text-[24px]'/>
+                        <p className='sub-name'>Resume</p>
                         </li>
                     </Link>
                     <Link to={"/projects"}>
-                        <li>
-                        <RiAppsFill className='text-black text-[24px]'/>
+                        <li className='relative items-nav'>
+                        <RiAppsFill className='text-[24px]'/>
+                        <p className='sub-name'>Projects</p>
                         </li>
                     </Link>
                     <Link to={"/contact"}>
-                        <li>
-                        <PiPhoneIncomingFill className='text-black text-[24px]'/>
+                        <li className='relative items-nav'>
+                        <PiPhoneIncomingFill className='text-[24px]'/>
+                        <p className='sub-name'>Contact</p>
                         </li>
                     </Link>
                   

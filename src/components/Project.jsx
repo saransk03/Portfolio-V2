@@ -60,102 +60,93 @@ const projects = [
 const Project = () => {
   return (
     <>
-      <Navbar />
-      <div className="w-[90%] lg:w-[calc(100%-300px)] h-screen mx-auto py-4 pt-8 ml-[300px] relative back">
-        <video muted autoPlay loop className="video">
-          <source
-            src="https://videos.pexels.com/video-files/2611250/2611250-uhd_2560_1440_30fps.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <motion.div
-          className="w-[95%] grid grid-cols-1 mx-auto z-10"
-          variants={{
-            hidden: { opacity: 0 },
-            show: { opacity: 1, transition: { staggerChildren: 0.3 } },
-          }}
-          initial="hidden"
-          animate="show"
-        >
-          <div className="flex flex-col justify-center items-center">
-            <motion.h1
-              className="text-white text-[80px] font-[700] leading-none"
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 1,
-                ease: "easeIn",
-                type: "spring",
-                stiffness: 400,
-                damping: 10,
-                delay: 0.2,
-              }}
-            >
-              PROJECTS
-            </motion.h1>
-            <motion.p
-              className="text-[#9611f5] text-[20px] font-[700] tracking-[.16em] leading-none"
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 1,
-                ease: "easeIn",
-                type: "spring",
-                stiffness: 400,
-                damping: 10,
-                delay: 0.2,
-              }}
-            >
-              EXPLORE MY PROJECT WORKS
-            </motion.p>
-          </div>
-          <div className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-14 mt-5">
-            {projects.map((items, i) => {
-              return (
-                <div key={i} className="flex flex-col gap-1.5 project-box">
-                  <div className="w-[340px] h-[230px] overflow-hidden rounded-[20px] bg-gray-800 flex justify-center items-center relative ">
-                    <img
-                      src={items.image}
-                      alt={items.title}
-                      className="w-[340px] h-[230px] object-cover"
-                    />
-                    <div className="tech-box">
-                      <div className="px-3 py-1 font-['Poppins'] text-white rounded-[20px] font-[600] text-[8px] bg-[#8600E4]">
-                        {items.tech_1}
-                      </div>
-                      <div className="px-3 py-1 font-['Poppins'] rounded-[20px] font-[600] text-[8px] bg-sky-500">
-                        {items.tech_2}
-                      </div>
+      <motion.div
+        className="w-[95%] grid grid-cols-1 mx-auto z-10"
+        variants={{
+          hidden: { opacity: 0 },
+          show: { opacity: 1, transition: { staggerChildren: 0.3 } },
+        }}
+        initial="hidden"
+        animate="show"
+      >
+        <div className="flex flex-col justify-center items-center">
+          <motion.h1
+            className="text-white text-[80px] font-[700] leading-none"
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              ease: "easeIn",
+              type: "spring",
+              stiffness: 400,
+              damping: 10,
+              delay: 0.2,
+            }}
+          >
+            PROJECTS
+          </motion.h1>
+          <motion.p
+            className="text-[#9611f5] text-[20px] font-[700] tracking-[.16em] leading-none"
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+              ease: "easeIn",
+              type: "spring",
+              stiffness: 400,
+              damping: 10,
+              delay: 0.2,
+            }}
+          >
+            EXPLORE MY PROJECT WORKS
+          </motion.p>
+        </div>
+        <div className="w-[95%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-14 mt-5">
+          {projects.map((items, i) => {
+            return (
+              <div key={i} className="flex flex-col gap-1.5 project-box">
+                <div className="w-[340px] h-[230px] overflow-hidden rounded-[20px] bg-gray-800 flex justify-center items-center relative ">
+                  <img
+                    src={items.image}
+                    alt={items.title}
+                    className="w-[340px] h-[230px] object-cover"
+                  />
+                  <div className="tech-box">
+                    <div className="px-3 py-1 font-['Poppins'] text-white rounded-[20px] font-[600] text-[8px] bg-[#8600E4]">
+                      {items.tech_1}
                     </div>
-                    <div className="link-box">
-                      <Link to={items.link} target="_blank">
-                        <motion.div
-                          className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-green-700"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 400,
-                            damping: 10,
-                          }}
-                        >
-                          <HiOutlineExternalLink className="text-[20px] text-white" />
-                        </motion.div>
-                      </Link>
+                    <div className="px-3 py-1 font-['Poppins'] rounded-[20px] font-[600] text-[8px] bg-sky-500">
+                      {items.tech_2}
                     </div>
                   </div>
-                  <div className="font-['Poppins'] text-white flex flex-col justify-center items-start pl-4 project-text">
-                    <h2 className="text-[16px] font-[700] project-text-h1">
-                      {items.title}
-                    </h2>
-                    <p className="text-[10px] font-[400]"></p>
+                  <div className="link-box">
+                    <Link to={items.link} target="_blank">
+                      <motion.div
+                        className="w-[40px] h-[40px] rounded-[50%] flex justify-center items-center bg-green-700"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <HiOutlineExternalLink className="text-[20px] text-white" />
+                      </motion.div>
+                    </Link>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        </motion.div>
-      </div>
+                <div className="font-['Poppins'] text-white flex flex-col justify-center items-start pl-4 project-text">
+                  <h2 className="text-[16px] font-[700] project-text-h1">
+                    {items.title}
+                  </h2>
+                  <p className="text-[10px] font-[400]"></p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </motion.div>
     </>
   );
 };

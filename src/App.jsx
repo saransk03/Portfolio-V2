@@ -5,6 +5,7 @@ import About from './components/About'
 import Project from './components/Project'
 import Contact from './components/Contact'
 import Resume from './components/Resume'
+import Layout from './components/Layout'
 
 const App = () => {
   return (
@@ -12,10 +13,12 @@ const App = () => {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/resume" element={<Resume/>}/>
-        <Route path="/projects" element={<Project/>}/>
-        <Route path="/contact" element={<Contact/>}/>
+        <Route path='/' element={<Layout/>}>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/resume" element={<Resume/>}/>
+          <Route path="/projects" element={<Project/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+        </Route>
       </Routes>
       </BrowserRouter>
     </>
