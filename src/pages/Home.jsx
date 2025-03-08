@@ -1,21 +1,22 @@
 import React, { useEffect } from "react";
-import "./home.css";
 import { motion } from "motion/react";
 import { assests } from "../../public/assets/assests";
-import { FaLinkedinIn, FaLaptopCode, FaPhoneAlt } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
-import { IoIosContact } from "react-icons/io";
-import { IoSchool } from "react-icons/io5";
-import { PiReadCvLogoDuotone } from "react-icons/pi";
-import { Link } from "react-router-dom";
 import HomeNav from "../components/HomeNav";
 import Hyperspeed from "../blocks/Backgrounds/Hyperspeed/Hyperspeed";
+
+const text = "Frontend";
+const text2 = "Developer";
 
 const Home = () => {
   return (
     <>
-      <HomeNav />
+      <div className="hidden md:flex">
+        <HomeNav />
+      </div>
+
       <Hyperspeed
         effectOptions={{
           onSpeedUp: () => {},
@@ -87,53 +88,99 @@ const Home = () => {
           },
         }}
       />
-      <div className="2xl:container mx-auto relative back">
-        <div className="w-[90%] mx-auto relative mt-[45px] ">
-          <img
-            src={assests.home}
-            alt="boy"
-            className="absolute w-[450px] home-img"
-          />
-          <div className="w-[80%] mx-auto flex flex-col justify-center leading-none">
-            <p className="text-white text-[20px] ml-[-30px] font-['Poppins'] leading-none">
+      <div className="2xl:container mx-auto relative">
+        <div className="w-[90%] mx-auto mt-[50px] md:mt-[45px] ">
+         <div className="absolute home-img z-40 md:w-[450px] w-[400px]">
+            <motion.img
+              src={assests.home}
+              alt="boy"
+              className="md:w-[450px] w-[400px]"
+              initial={{ y: 550 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.0, ease: "easeInOut" }}
+            />
+         </div>
+          <div className="w-[80%] mx-auto flex flex-col justify-center z-10 leading-none">
+            <p className="text-white text-[12px] md:text-[20px] ml-[-30px] font-['Poppins'] leading-none"
+            data-aos="fade-right"
+            data-aos-easing="ease-out-sine"
+            data-aos-duration="1200">
               Hello, I'm Sarankumar
             </p>
-           <div className="flex flex-col justify-center items-center">
-              <h1 className="text-white text-center text-[240px] home-head mt-3  leading-[1]">
-                Frontend
+            <div className="flex flex-col justify-center items-center">
+              <h1 className="text-white text-center text-[60px] md:text-[240px] home-head mt-3  leading-[1]">
+                {text.split("").map((letter, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ filter: "blur(10px)", opacity: 0 }}
+                    animate={{ filter: "blur(0px)", opacity: 1 }}
+                    transition={{
+                      duration: 1.2,
+                      ease: "anticipate",
+                      // delay: index * 0.1,
+                    }}
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
               </h1>
-              <p className="text-white text-center text-[240px] home-text leading-[0.9]">
-                Developer
+              <p className="text-white text-center text-[70px] md:text-[240px] home-text leading-[0.9]">
+                {text2.split("").map((letter, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ filter: "blur(10px)", opacity: 0 }}
+                    animate={{ filter: "blur(0px)", opacity: 1 }}
+                    transition={{
+                      duration: 1.0,
+                      ease: "anticipate",
+                      // delay: index * 0.1,
+                    }}
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
               </p>
-           </div>
-            <p className="text-white text-[20px] text-right pr-8 font-['Poppins']">
+            </div>
+            <p className="text-white text-[12px] md:text-[20px] text-right mt-2 md:mt-0 md:pr-8 font-['Poppins']"
+            data-aos="fade-left"
+            data-aos-easing="ease-out-sine"
+            data-aos-duration="1200">
               Based in India
             </p>
           </div>
         </div>
-                
-        <div className="home-links flex flex-col items-center justify-center gap-8">
 
+        <div className="home-links flex flex-col items-center justify-center gap-8">
           <div className="flex flex-col gap-3 ">
             <a href="https://www.linkedin.com/in/sarankumar-m/" target="_blank">
-              <div className="w-[40px] h-[40px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300">
-                <FaLinkedinIn className="text-[20px] text-white group-hover:text-[22px] transition-all duration-300" />
+              <div className="md:w-[40px] md:h-[40px] w-[35px] h-[35px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300"
+              data-aos="flip-right"
+              data-aos-easing="ease-out-sine"
+              data-aos-duration="500">
+                <FaLinkedinIn className="md:text-[20px] text-[14px] text-white group-hover:text-[16px] md:group-hover:text-[22px] transition-all duration-300" />
               </div>
             </a>
             <a href="https://github.com/saransk03" target="_blank">
-              <div className="w-[40px] h-[40px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300">
-                <FaGithub className="text-[20px] text-white group-hover:text-[22px] transition-all duration-300" />
+              <div className="md:w-[40px] md:h-[40px] w-[35px] h-[35px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300"
+              data-aos="flip-right"
+              data-aos-easing="ease-out-sine"
+              data-aos-duration="750">
+                <FaGithub className="md:text-[20px] text-[14px] text-white group-hover:text-[16px] md:group-hover:text-[22px] transition-all duration-300" />
               </div>
             </a>
             <a href="mailto:saransk753@gmail.com" target="_blank">
-              <div className="w-[40px] h-[40px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300">
-                <MdAlternateEmail className="text-[20px] text-white group-hover:text-[22px] transition-all duration-300" />
+              <div className="md:w-[40px] md:h-[40px] w-[35px] h-[35px] flex justify-center items-center rounded-[50%] border-2 border-[#8600E4] group hover:shadow-[0px_0px_20px_rgba(0,0,0,0.7)] hover:shadow-[#8600E4] transition-all duration-300"
+              data-aos="flip-right"
+              data-aos-easing="ease-out-sine"
+              data-aos-duration="950">
+                <MdAlternateEmail className="md:text-[20px] text-[14px] text-white group-hover:text-[16px] md:group-hover:text-[22px] transition-all duration-300" />
               </div>
             </a>
           </div>
-
-        </div> 
-       
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-[50%] z-50 flex md:hidden translate-x-[-50%]">
+        <HomeNav />
       </div>
     </>
   );

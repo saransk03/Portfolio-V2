@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Home from './pages/Home'
 import About from './components/About'
@@ -6,11 +6,22 @@ import Project from './components/Project'
 import Contact from './components/Contact'
 import Resume from './components/Resume'
 import Layout from './components/Layout'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+import ScrollToTop from './components/ScrolltoTop'
 
 const App = () => {
+
+  useEffect(() => {
+    AOS.init({
+      offset: -10,
+    })
+  },[]);
+
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/' element={<Layout/>}>

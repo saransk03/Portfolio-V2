@@ -7,35 +7,23 @@ import { assests } from "../../public/assets/assests";
 const Navbar = () => {
   return (
     <>
-      <motion.div className="w-[280px] h-[90%] my-[1%] hidden lg:block fixed top-5 left-7 mx-auto navbar"
-      variants={{
-        hidden: { opacity: 0},
-        show: { opacity: 1, transition: { staggerChildren: 0.3 } },
-      }}
-      initial="hidden"
-      animate="show"
-      transition={{
-        duration: 2,
-        ease: "easeOut",
-        smooth: true,
-      }}>
+      <div className="w-[280px] h-[90%] my-[1%] hidden lg:block fixed top-5 left-7 mx-auto navbar"
+      data-aos="flip-left"
+      data-aos-easing="ease-in-cubic"
+      data-aos-duration="500">
         <div
           className="w-[90%] h-full grid grid-cols-1 mx-auto py-3"
           
         >
           <div className="flex flex-col justify-evenly items-center">
             <div className="flex flex-col justify-center items-center">
-              <motion.img
+              <img
                 src={assests.portfolio}
                 alt="image"
                 className="w-[200px] py-3 image"
-                initial={{ opacity: 0, rotateZ: 720 ,scale: 0}}
-                animate={{ opacity: 1, rotateZ: 0 , scale: 1}}
-                transition={{
-                  duration: 1,
-                  ease: "easeInOut",
-                  delay: 0.2,
-                }}
+                data-aos="flip-right"
+                data-aos-easing="ease-in-cubic"
+                data-aos-duration="700"
               />
               <Link to={"/"}>
                 <motion.h1 className="text-white font-['Poppins'] text-xl font-[700] tracking-wider"
@@ -116,7 +104,7 @@ const Navbar = () => {
             </motion.p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };
