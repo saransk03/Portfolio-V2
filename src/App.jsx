@@ -6,9 +6,9 @@ import Project from './components/Project'
 import Contact from './components/Contact'
 import Resume from './components/Resume'
 import Layout from './components/Layout'
+import ScrollToTop from './components/ScrollToTop'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
-import ScrollToTop from './components/ScrolltoTop'
 
 const App = () => {
 
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/' element={<Layout/>}>
