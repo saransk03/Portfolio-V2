@@ -33,7 +33,7 @@ const Contact = () => {
 
     if (res.success) {
       toast.success("Hooray! Your form has been submitted 🎉", {
-        position: "top-right",
+        position: "top-center",
         autoClose: 3000, // Auto close after 3 seconds
         hideProgressBar: false,
         closeOnClick: true,
