@@ -87,7 +87,7 @@ const Contact = () => {
               <HiPhone className="text-[23px]" /> Phone No
             </h1>
             <p className="text-[12px] md:text-[15px] font-[600] text-white">
-              +91 9514053103
+              +91 9360361672
             </p>
           </div>
           <div

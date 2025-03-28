@@ -94,7 +94,7 @@ const Resume = () => {
         <div className="w-[90%] mx-auto mt-8 md:mt-4">
           <Link
             to={
-              "https://drive.google.com/file/d/1fOOUmbTwcBd7Ic-nTzvdAd6isOfaeNSD/view?usp=sharing"
+              "https://drive.google.com/file/d/1l3YIH6_vYHKZhIgzQDUJSpgsXyYxu_wM/view?usp=sharing"
             }
             target="_blank"
             className="py-4"
