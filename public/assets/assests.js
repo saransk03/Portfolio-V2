@@ -26,6 +26,8 @@ import karupatti from './karupatti.jpg'
 import portfoliov1 from './portfolio-1.jpg'
 import foodspot from './foodspot.jpg'
 import home from './home.png'
+import wpweb from './wpweb.png'
+import wordpress from './wordpress.png'
 
 
 export const assests = {
@@ -42,7 +44,9 @@ export const assests = {
     tailwind,
     bootstrap,
     redux,
+    wordpress,
     vscode,
+    wpweb,
     firebase,
     ai,
     ps,

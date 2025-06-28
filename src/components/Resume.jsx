@@ -36,6 +36,10 @@ const skills = [
     image: assests.redux,
     name: "REDUX",
   },
+  {
+    image: assests.wordpress,
+    name: "WORDPRESS",
+  },
 ];
 
 const tools = [

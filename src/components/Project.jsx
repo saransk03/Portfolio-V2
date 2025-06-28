@@ -7,6 +7,13 @@ import { Link } from "react-router-dom";
 
 const projects = [
   {
+    title: "SK DSIGN WEBSITE",
+    image: assests.wpweb,
+    tech_1: "Wordpress",
+    tech_2: "Elementor",
+    link: "http://skdsign.netlify.app",
+  },
+  {
     title: "YOUTUBE CLONE WEBSITE",
     image: assests.youtube,
     tech_1: "React Js",
